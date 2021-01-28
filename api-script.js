@@ -1,11 +1,12 @@
 // BetetrDoc user key:"12c23081909d74ddea3753987eb42f20";
 
 // Doctor Search
-var api_key = "CODE_SAMPLES_KEY_9d3608187"; // Get your API key at developer.betterdoctor.com
+var api_key = "12c23081909d74ddea3753987eb42f20"; // Get your API key at developer.betterdoctor.com
 
 var resource_url =
   "https://api.betterdoctor.com/2016-03-01/doctors?location=37.773,-122.413,100&skip=2&limit=10&user_key=" +
-  api_key;
+  console.log(resource_url);
+api_key;
 ("12c23081909d74ddea3753987eb42f20");
 
 $.get(resource_url, function (data) {
