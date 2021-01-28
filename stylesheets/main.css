@@ -616,4 +616,16 @@ ul.flyout li a:hover, .nav-bar li ul li a:hover { background: #151515; color: #f
 		display: none;
 	}
 }
-
+.input-group-rounded {
+	.input-group-field {
+	  border-radius: 5000px 0 0 5000px;
+	  padding-left: 1rem;
+	}
+  
+	.input-group-button .button {
+	  border-radius:  0 5000px 5000px 0;
+	  font-size: 0.8rem;
+	}
+  }
+  
+  

@@ -1094,3 +1094,15 @@ div.progress.round .meter { -webkit-border-radius: 1000px; -moz-border-radius: 1
   .top-bar.expanded ul li.toggle-topbar a { content: ""; display: block; width: 0; height: 0; border: solid 8px; border-color: transparent transparent rgba(255, 255, 255, 0.5) transparent; top: auto; bottom: 50%; margin-bottom: -4px; }
   .top-bar ul li.has-button { padding: 0 20px 5px; }
   .top-bar ul li .button.small { margin: 0 !important; display: inline-block; width: 100%; } }
+  .input-group-rounded {
+    .input-group-field {
+      border-radius: 5000px 0 0 5000px;
+      padding-left: 1rem;
+    }
+    
+    .input-group-button .button {
+      border-radius:  0 5000px 5000px 0;
+      font-size: 0.8rem;
+    }
+    }
+    
