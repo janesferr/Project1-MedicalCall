@@ -93,10 +93,10 @@ header {background: rgb(101,183,216); clear:both; padding: 20px 0 40px}
 
 .blog_post {clear: both; padding: 15px 0; overflow:auto; margin-bottom: 20px; background:#FFF; box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4)}
 .blog_post h3 {margin-top:0}
-.blog_post img {}
+/* .blog_post img {} */
 .post_meta {color: #999; font-size: 14px; margin-bottom: 20px}
 
-.featured_post {}
+/* .featured_post {} */
 .featured_post img {margin: 12px 0}
 .featured_post h3 {margin:10px 0 0; color: #000}
 
@@ -120,7 +120,7 @@ h1,h2,h3,h4 {font-family:'Open Sans Condensed',sans-serif; font-weight: normal; 
 
 
 .heading_supersize {font-size: 128px; text-align:center; font-weight: normal; line-height: 150px; margin:0 0 10px; color: #212121}
-.heading_largesize {font-size: 34px; text-align:; font-weight: normal}
+/* .heading_largesize {font-size: 34px; text-align:; font-weight: normal} */
 
 .dropcap_red, 
 .dropcap_black {  
@@ -137,7 +137,6 @@ h1,h2,h3,h4 {font-family:'Open Sans Condensed',sans-serif; font-weight: normal; 
 .dropcap_red {background: none; color: #999}
 .dropcap_black {background: none; color: #999}
 
-.panel {}
 
 .panel.callout {background: #FE563B; border: 1px solid #CCC}
 
@@ -153,7 +152,7 @@ dl.tabs dd.active {
 }
 
 dl.tabs dd.active a {background: #fff}
-
+/* 
 .nav-bar {margin-top: 0; background: none}
 .nav-bar > li {border: 0; padding: 0; font-family: 'Open Sans Condensed',sans-serif; letter-spacing: 1px; box-shadow: none}
 .nav-bar > li > a:first-child {font-size: 16px; text-transform: uppercase; padding: 0 25px}
@@ -173,9 +172,9 @@ dl.tabs dd.active a {background: #fff}
 
 .nav-bar > li.has-flyout > a:first-child:after { content: ""; display: block; width: 0; height: 0; border: solid 5px; border-color: #e0e0e0 transparent transparent transparent; position: absolute; right: 20px; top: 17px; }
 
-.nav-bar > li.has-flyout > a:hover:first-child:after { content: ""; display: block; width: 0; height: 0; border: solid 5px; border-color: #e0e0e0 transparent transparent transparent; position: absolute; right: 20px; top: 17px; }
+.nav-bar > li.has-flyout > a:hover:first-child:after { content: ""; display: block; width: 0; height: 0; border: solid 5px; border-color: #e0e0e0 transparent transparent transparent; position: absolute; right: 20px; top: 17px; } */
 
-
+/* 
 .flyout {background: #FAFAFA; border-radius: 5px; border: 0; margin-top: -1px; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.7);}
 
 ul.flyout li, .nav-bar li ul li { border-left: 0}
@@ -191,13 +190,13 @@ ul.flyout li a:hover, .nav-bar li ul li a:hover { background: #151515; color: #f
 /* nav bar vertical */
 
 
-.nav-bar.vertical > li {border:0;}
+/* .nav-bar.vertical > li {border:0;}
 
 .nav-bar.vertical > li:last-child {border:0}
-		
+		 */
 /* gallery menu */
 
-.gallery-nav-bar {list-style:none; text-align: center; padding-top:10px; font-family: 'Open Sans Condensed',sans-serif; letter-spacing: 2px; text-transform: uppercase}
+/* .gallery-nav-bar {list-style:none; text-align: center; padding-top:10px; font-family: 'Open Sans Condensed',sans-serif; letter-spacing: 2px; text-transform: uppercase}
 .gallery-nav-bar li {display: inline-block; margin-right: 1px}
 
 .gallery-nav-bar li {padding: 3px 12px}
@@ -207,11 +206,11 @@ ul.flyout li a:hover, .nav-bar li ul li a:hover { background: #151515; color: #f
 .gallery-nav-bar li a:hover {background: #C02702; color: #FFF; padding: 3px 12px; border-radius: 3px}
 
 
-.footer {text-align:center; padding: 50px 0}
+.footer {text-align:center; padding: 50px 0} */ */
 
 /*-------------------------------------------------------------------------------------------------*/
 /* Masonry
-/*-------------------------------------------------------------------------------------------------*/
+-------------------------------------------------------------------------------------------------
 
 .centered { margin: 0 auto; }
 
