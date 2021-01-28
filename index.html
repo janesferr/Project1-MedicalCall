@@ -3,7 +3,8 @@
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<!--[if gt IE 8]>> <html class="no-js" lang="en"> <![endif]-->
+<html lang="en">
 
 <head>
 
@@ -18,9 +19,9 @@
   <link rel="stylesheet" href="stylesheets/main.css">
   <link rel="stylesheet" href="stylesheets/app.css">
 
-  <script src="javascripts/modernizr.foundation.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   
-  <link rel="stylesheet" href="ligature.css">
+  <!-- <link rel="stylesheet" href="ligature.css"> -->
   
   <!-- Google fonts -->
   <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Playfair+Display:400italic' rel='stylesheet' type='text/css' />
@@ -29,52 +30,12 @@
   <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
-
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 </head>
 
 <body>
 
-<!-- ######################## Main Menu ######################## -->
  
-<nav>
-
-     <div class="twelve columns header_nav">
-     <div class="row">
-      
-        <ul id="menu-header" class="nav-bar horizontal">
-        
-         <li class="active"><a href="index.html">Home</a></li>
-      
-          <li class="has-flyout">
-           <a href="#">Example Pages</a><a href="#" class="flyout-toggle"></a>
-            <ul class="flyout"><!-- Flyout Menu -->
-              <li class="has-flyout"><a href="blog.html">Blog</a></li>
-              <li class="has-flyout"><a href="blog_single.html">Blog Single Page</a></li>
-              <li class="has-flyout"><a href="products-page.html">Products Page</a></li>
-              <li class="has-flyout"><a href="product-single.html">Product Single</a></li>
-              <li class="has-flyout"><a href="pricing-table.html">Pricing Table</a></li>
-              <li class="has-flyout"><a href="contact.html">Contact Page</a></li>
-            </ul> 
-          </li><!-- END Flyout Menu -->
-      
-          <li class=""><a href="galleries.html">Boxed Gallery</a></li>
-          <li class=""><a href="portfolio.html">Portfolio Gallery</a></li>
-          <li class=""><a href="pinterest-style.html">Pinterest Gallery</a></li>
-          <li class=""><a href="tiles.html">Tiles</a></li>
-      
-        </ul>
-        
-        <script type="text/javascript">
-         //<![CDATA[
-         $('ul#menu-header').nav-bar();
-          //]]>
-        </script>
-        
-      </div>  
-      </div>
-      
-</nav>
-      
       
 <!-- ######################## Header ######################## -->
         
@@ -106,12 +67,12 @@
             <div class="input-group input-group-rounded">
               <input class="input-group-field" type="search">
               <div class="input-group-button">
-                <input type="submit" class="button secondary" value="Search">
+                <button type="submit" class="button secondary" value="Search">Search</button>
               </div>
             </div>
             
             
-            <p>Populate your field with the latest expert doctors.</p>
+            <p class="populate-field">Populate your field with the latest expert doctors.</p>
           </div>
         
         </div>
@@ -184,30 +145,7 @@
       
       
 </section>
-
-<!-- ######################## Footer ######################## -->  
       
-<footer>
-
-      <div class="row">
-      
-          <div class="twelve columns footer">
-              <a href="http://twitter.com/dieterarno" class="lsf-icon" style="font-size:16px; margin-right:15px" title="twitter">Twitter</a> 
-              <a href="http://csstemplateheaven.com/csstemplateheaven" class="lsf-icon" style="font-size:16px; margin-right:15px" title="facebook">Facebook</a>
-              <a href="http://csstemplateheaven.com/csstemplateheaven" class="lsf-icon" style="font-size:16px; margin-right:15px" title="pinterest">Pinterest</a>
-              <a href="http://twitter.com/dieterarno" class="lsf-icon" style="font-size:16px" title="instagram">Instagram</a>
-          </div>
-          
-      </div>
-
-</footer>		  
-
-<!-- ######################## Scripts ######################## --> 
-
-    <!-- Included JS Files (Compressed) -->
-    <script src="javascripts/foundation.min.js" type="text/javascript"></script> 
-    <!-- Initialize JS Plugins -->
-     <script src="javascripts/app.js" type="text/javascript"></script>
-     <script src="script.js"></script>
+     <script src="doctorscript.js"></script>
 </body>
 </html>

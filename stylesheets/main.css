@@ -6,7 +6,7 @@
 
 /* CSS */
 
-@font-face {
+/* @font-face {
     font-family: 'LigatureSymbols';
     src: url('LigatureSymbols-2.05.eot');
     src: url('LigatureSymbols-2.05.eot?#iefix') format('embedded-opentype'),
@@ -63,7 +63,7 @@
   -ms-font-smoothing: antialiased;
   -o-font-smoothing: antialiased;
   font-smoothing: antialiased;
-}
+} */
 
 body {background: #fafafa}
 
