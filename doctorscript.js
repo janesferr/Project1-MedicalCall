@@ -23,7 +23,7 @@ function click_hospitalSearch(event) {
     }).then(function(response) {
         var hospitals = JSON.parse(response.contents);
         console.log('we found', hospitals.length, 'hospital(s) in the great state of', state);
-        $('#discoverer').html(`Discover Our Hospitals in ${state} (${hospitals.length})`);
+        $('#discoverer').html(`Discover Our Hospitals in ${state} with total number of hospitals as ${hospitals.length}`);
         renderHospitalCards(hospitals);
     });
 
@@ -66,12 +66,12 @@ function print_state_hospital_info(state) {
         var hospitals = JSON.parse(response.contents);
         console.log('we found', hospitals.length, 'in the great state of', state);
 
-        hospitals.forEach(hospital => {
-            console.log('Hospital Name:', hospital.name);
-            console.log('Street Address:', hospital.street_address);
-            console.log('Bed Count:', hospital.hospital_bed_count);
-            console.log('--++--');
-        });
+        // hospitals.forEach(hospital => {
+        //     console.log('Hospital Name:', hospital.name);
+        //     console.log('Street Address:', hospital.street_address);
+        //     console.log('Bed Count:', hospital.hospital_bed_count);
+        //     console.log('--++--');
+        // });
     });
 }
   
