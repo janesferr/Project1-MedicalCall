@@ -19,7 +19,11 @@ function click_hospitalSearch(event) {
     $.ajax({
         url: queryUrl,
         method: "GET",
+        crossDomain: true,
         dataType: 'jsonp',
+        headers: {
+            'Access-Control-Allow-Origin': '*'
+        }
     }).then(function(response) {
         var hospitals = JSON.parse(response.contents);
         console.log('we found', hospitals.length, 'hospital(s) in the great state of', state);
