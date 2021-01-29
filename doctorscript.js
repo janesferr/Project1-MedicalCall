@@ -18,7 +18,24 @@ function click_hospitalSearch(event) {
         state
     );
 
+<<<<<<< HEAD
+    $.ajax({
+        url: queryUrl,
+        method: "GET",
+        crossDomain: true,
+        dataType: 'jsonp',
+        headers: {
+            'Access-Control-Allow-Origin': '*'
+        }
+    }).then(function(response) {
+        var hospitals = JSON.parse(response.contents);
+        console.log('we found', hospitals.length, 'hospital(s) in the great state of', state);
+        $('#discoverer').html(`Discover Our Hospitals in ${state} with total number of hospitals as ${hospitals.length}`);
+        renderHospitalCards(hospitals);
+    });
+=======
   console.log("(fingers crossed) going to request", queryUrl);
+>>>>>>> main
 
   $.ajax({
     url: queryUrl,
