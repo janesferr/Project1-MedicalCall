@@ -18,5 +18,6 @@ $.ajax({
     // var searchInput = $(".input-group-field").val();
     // <p class="populate-field">
     $(".populate-field").text(JSON.parse(response.contents[0]));
+
   });
 });
