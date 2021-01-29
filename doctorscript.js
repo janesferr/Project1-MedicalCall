@@ -18,7 +18,6 @@ function click_hospitalSearch(event) {
         state
     );
 
-<<<<<<< HEAD
     $.ajax({
         url: queryUrl,
         method: "GET",
@@ -33,9 +32,6 @@ function click_hospitalSearch(event) {
         $('#discoverer').html(`Discover Our Hospitals in ${state} with total number of hospitals as ${hospitals.length}`);
         renderHospitalCards(hospitals);
     });
-=======
-  console.log("(fingers crossed) going to request", queryUrl);
->>>>>>> main
 
   $.ajax({
     url: queryUrl,
