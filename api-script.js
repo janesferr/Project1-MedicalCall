@@ -1,6 +1,5 @@
 var queryUrl =
-  // "http://www.whateverorigin.org/get?url=http://www.communitybenefitinsight.org/api/get_hospitals.php?state=NC";
-  "http://www.whateverorigin.org/get?url=http://www.communitybenefitinsight.org/api/get_hospitals.php?zip_code";
+  "http://www.whateverorigin.org/get?url=http://www.communitybenefitinsight.org/api/get_hospitals.php?state=NC";
 $.ajax({
   url: queryUrl,
   method: "GET",
