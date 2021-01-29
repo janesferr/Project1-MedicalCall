@@ -33,23 +33,23 @@ function click_hospitalSearch(event) {
         renderHospitalCards(hospitals);
     });
 
-  $.ajax({
-    url: queryUrl,
-    method: "GET",
-    dataType: "jsonp",
-  }).then(function (response) {
-    var hospitals = JSON.parse(response.contents);
-    console.log(
-      "we found",
-      hospitals.length,
-      "hospital(s) in the great state of",
-      state
-    );
-    $("#discoverer").html(
-      `Discover Our Hospitals in ${state} with total number of hospitals as ${hospitals.length}`
-    );
-    renderHospitalCards(hospitals);
-  });
+  // $.ajax({
+  //   url: queryUrl,
+  //   method: "GET",
+  //   dataType: "jsonp",
+  // }).then(function (response) {
+  //   var hospitals = JSON.parse(response.contents);
+  //   console.log(
+  //     "we found",
+  //     hospitals.length,
+  //     "hospital(s) in the great state of",
+  //     state
+  //   );
+  //   $("#discoverer").html(
+  //     `Discover Our Hospitals in ${state} with total number of hospitals as ${hospitals.length}`
+  //   );
+  //   renderHospitalCards(hospitals);
+  // });
 }
 
 function renderHospitalCards(hospitals) {
