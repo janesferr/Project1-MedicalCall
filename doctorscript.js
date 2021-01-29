@@ -12,7 +12,7 @@ function click_hospitalSearch(event) {
 
   // construct query
   var queryUrl =
-    "//http://www.whateverorigin.org/get?url=" +
+    "http://www.whateverorigin.org/get?url=" +
     encodeURIComponent(
       "http://www.communitybenefitinsight.org/api/get_hospitals.php?state=" +
         state
