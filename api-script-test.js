@@ -20,10 +20,10 @@ $.ajax({
     // <p class="populate-field">
     $(".populate-field").text(JSON.parse(response.contents[0]));
   });
-//   ARRAY FILTER
-//   const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
-// const result = words.filter(word => word.length > 6);
-// console.log(result);
-// expected output: Array ["exuberant", "destruction", "present"]
-  const zipcodeArray = [response.contents.0.zip_code];
+  //   ARRAY FILTER
+  //   const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+  // const result = words.filter(word => word.length > 6);
+  // console.log(result);
+  // expected output: Array ["exuberant", "destruction", "present"]
+  const zipcodeArray = [response.contents.zip_code];
 });
