@@ -11,27 +11,15 @@ function click_hospitalSearch(event) {
   console.log("the user wants us to search for", state);
 
   // construct query
-  var queryUrl =
-    "http://www.whateverorigin.org/get?url=" +
-    encodeURIComponent(
-      "http://www.communitybenefitinsight.org/api/get_hospitals.php?state=" +
-        state
-    );
-
+  var queryUrl = '/api/hospitals/' + state + '.json';
   console.log("(fingers crossed) going to request", queryUrl);
 
   $.ajax({
     url: queryUrl,
     method: "GET",
-    dataType: "jsonp",
-  }).then(function (response) {
-    var hospitals = JSON.parse(response.contents);
-    console.log(
-      "we found",
-      hospitals.length,
-      "hospital(s) in the great state of",
-      state
-    );
+  }).then(function (hospitals) {
+    
+    console.log("we found", hospitals.length, "hospital(s) in the great state of", state);
     $("#discoverer").html(
       `Discover Our Hospitals in ${state} with total number of hospitals as ${hospitals.length}`
     );
