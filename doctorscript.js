@@ -49,29 +49,74 @@ function renderHospitalCards(hospitals) {
 
 $("#hospital_search").on("click", click_hospitalSearch);
 
-function print_state_hospital_info(state) {
-  var queryUrl =
-    "http://www.whateverorigin.org/get?url=" +
-    encodeURIComponent(
-      "http://www.communitybenefitinsight.org/api/get_hospitals.php?state=" +
-        state
-    );
+// function print_state_hospital_info(state) {
+//   var queryUrl =
+//     "http://www.whateverorigin.org/get?url=" +
+//     encodeURIComponent(
+//       "http://www.communitybenefitinsight.org/api/get_hospitals.php?state=" +
+//         state
+//     );
 
-  console.log("going to request:", queryUrl);
+//   console.log("going to request:", queryUrl);
 
-  $.ajax({
-    url: queryUrl,
-    method: "GET",
-    dataType: "jsonp",
-  }).then(function (response) {
-    var hospitals = JSON.parse(response.contents);
-    console.log("we found", hospitals.length, "in the great state of", state);
+//   $.ajax({
+//     url: queryUrl,
+//     method: "GET",
+//     dataType: "jsonp",
+//   }).then(function (response) {
+//     var hospitals = JSON.parse(response.contents);
+//     console.log("we found", hospitals.length, "in the great state of", state);
 
-    // hospitals.forEach(hospital => {
-    //     console.log('Hospital Name:', hospital.name);
-    //     console.log('Street Address:', hospital.street_address);
-    //     console.log('Bed Count:', hospital.hospital_bed_count);
-    //     console.log('--++--');
-    // });
-  });
-}
+//     // hospitals.forEach(hospital => {
+//     //     console.log('Hospital Name:', hospital.name);
+//     //     console.log('Street Address:', hospital.street_address);
+//     //     console.log('Bed Count:', hospital.hospital_bed_count);
+//     //     console.log('--++--');
+//     // });
+//   });
+// }
+
+// var x = $("#demo");
+// function getLocation() {
+//   if (navigator.geolocation) {
+//     navigator.geolocation.getCurrentPosition(showPosition);
+//   } else {
+//     x.innerHTML = "Geolocation is not supported by this browser.";
+//   }
+// }
+
+//   function showPosition(position) {
+//     x.html("Latitude: " + position.coords.latitude +
+//     "<br>Longitude: " + position.coords.longitude);
+//   }
+
+  $("#hospital_search_geo").on("click", getLocation);
+  
+      function initMap() {
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 8,
+          center: { lat: -34.397, lng: 150.644 },
+        });
+        const geocoder = new google.maps.Geocoder();
+        document.getElementById("submit").addEventListener("click", () => {
+          geocodeAddress(geocoder, map);
+        });
+      }
+
+      function geocodeAddress(geocoder, resultsMap) {
+        const address = document.getElementById("address").value;
+        geocoder.geocode({ address: address }, (results, status) => {
+          if (status === "OK") {
+            resultsMap.setCenter(results[0].geometry.location);
+            new google.maps.Marker({
+              map: resultsMap,
+              position: results[0].geometry.location,
+            });
+          } else {
+            alert(
+              "Geocode was not successful for the following reason: " + status
+            );
+          }
+        });
+      }
+    

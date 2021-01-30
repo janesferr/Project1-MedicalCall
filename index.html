@@ -32,6 +32,13 @@
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <script
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly"
+    defer
+  ></script>
+  <script defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXS0MQbQDV5TGAIvkSsNESvhyGKeeQEf8&libraries=places&callback=initMap">
+</script>
   </head>
 
   <body>
@@ -85,6 +92,8 @@
               >
                 Search
               </button>
+              <!-- <button class="button secondary" id="hospital_search_geo">Get hospitals in my state</button>
+              <div id="demo">Your position here.</div> -->
             </div>
           </div>
         </div>
@@ -92,41 +101,16 @@
     </section>
 
     <!-- ######################## Section ######################## -->
-
-    <!-- <section  class="section_dark">
-   
-      <div class="row"> 
-      
-      <h2 style="color: white">Latest Doctors in your location</h2>
-      
-          <div class="two columns">
-          <a href="#" class="th"><img src="" width="100" height="100" alt="desc" /></a>
-          </div>
-          
-          <div class="two columns">
-          <a href="#" class="th"><img src="" width="100" height="100"  alt="desc" /></a>
-          </div>
-          
-          <div class="two columns">
-          <a href="#" class="th"><img src="" width="100" height="100"  alt="desc" /></a>
-          </div>
-          
-          <div class="two columns">
-          <a href="#" class="th"><img src="" width="100" height="100"  alt="desc" /></a>
-          </div>
-          
-          <div class="two columns">
-          <a href="#" class="th"><img src="" width="100" height="100"  alt="desc" /></a>
-          </div>
-          
-          <div class="two columns">
-          <a href="#" class="th"><img src="" width="100" height="100"  alt="desc" /></a>
-          </div>
-
-      
+<!-- The map lives here...and geolocation input-->
+    <section  class="section_dark">
+      <div id="floating-panel">
+        <input id="address" type="textbox" value="NY" />
+        <input id="submit" type="button" value="Locate your Hospital in the map" />
       </div>
+      <div id="map"></div>
+   
       
-    </section> -->
+    </section>
 
     <!-- ######################## Section ######################## -->
 
@@ -163,3 +147,33 @@
     <script src="doctorscript.js"></script>
   </body>
 </html>
+<!-- <div class="row"> 
+      
+  <h2 style="color: white">Latest Doctors in your location</h2>
+  
+      <div class="two columns">
+      <a href="#" class="th"><img src="" width="100" height="100" alt="desc" /></a>
+      </div>
+      
+      <div class="two columns">
+      <a href="#" class="th"><img src="" width="100" height="100"  alt="desc" /></a>
+      </div>
+      
+      <div class="two columns">
+      <a href="#" class="th"><img src="" width="100" height="100"  alt="desc" /></a>
+      </div>
+      
+      <div class="two columns">
+      <a href="#" class="th"><img src="" width="100" height="100"  alt="desc" /></a>
+      </div>
+      
+      <div class="two columns">
+      <a href="#" class="th"><img src="" width="100" height="100"  alt="desc" /></a>
+      </div>
+      
+      <div class="two columns">
+      <a href="#" class="th"><img src="" width="100" height="100"  alt="desc" /></a>
+      </div>
+
+  
+  </div> -->
