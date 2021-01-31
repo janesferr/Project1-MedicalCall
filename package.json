@@ -1,0 +1,25 @@
+{
+  "name": "Project1-MedicalCall",
+  "version": "1.0.0",
+  "description": "",
+  "main": "doctorscript.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/janesferr/Project1-MedicalCall.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/janesferr/Project1-MedicalCall/issues"
+  },
+  "homepage": "https://github.com/janesferr/Project1-MedicalCall#readme",
+  "devDependencies": {
+    "webpack": "^5.19.0",
+    "webpack-cli": "^4.4.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
