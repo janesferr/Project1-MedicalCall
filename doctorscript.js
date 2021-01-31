@@ -44,10 +44,10 @@ function renderHospitalCards(hospitals) {
                     <h3>${hospital.name}</h3>
                   <p class="hospital-name"> Hospital Name: ${hospital.name}</p>
                   <p class="hospital-address"> Street Address: ${hospital.street_address}</p>
+                  <p class="state"> City: ${hospital.city}</p>
                   <p class="state"> State: ${hospital.state}</p>
                   <p class="bed-count"> Bed count: ${hospital.hospital_bed_count}</p>
 
-                  <a href="#" class="button secondary small radius">Learn More &raquo;</a>
                 </div>
           </article>`
     );
