@@ -12,6 +12,7 @@ function click_hospitalSearch(event) {
   console.log("the user wants us to search for", state);
 
   // construct query
+
   var queryUrl = 'api/hospitals/' + state + '.json';
   console.log("(fingers crossed) going to request", queryUrl);
 
