@@ -7,6 +7,7 @@
 //   3c. Loops through each hospital in hospitals using a forEach() print the details of each hospital as a card.
 
 function click_hospitalSearch(event) {
+
   var state = $("#hospital_search_state").val();
   console.log("the user wants us to search for", state);
 
@@ -17,6 +18,11 @@ function click_hospitalSearch(event) {
   $.ajax({
     url: queryUrl,
     method: "GET",
+    crossDomain: true,
+    // dataType: 'jsonp',
+    headers: {
+        'Access-Control-Allow-Origin': '*'
+    }
   }).then(function (hospitals) {
     
     console.log("we found", hospitals.length, "hospital(s) in the great state of", state);
@@ -24,6 +30,7 @@ function click_hospitalSearch(event) {
       `Discover Our Hospitals in ${state} with total number of hospitals as ${hospitals.length}`
     );
     renderHospitalCards(hospitals);
+    updateMap(hospitals, state, 5);
   });
 }
 
@@ -49,74 +56,48 @@ function renderHospitalCards(hospitals) {
 
 $("#hospital_search").on("click", click_hospitalSearch);
 
-// function print_state_hospital_info(state) {
-//   var queryUrl =
-//     "http://www.whateverorigin.org/get?url=" +
-//     encodeURIComponent(
-//       "http://www.communitybenefitinsight.org/api/get_hospitals.php?state=" +
-//         state
-//     );
+function updateMap(hospitals, state, limit) {
 
-//   console.log("going to request:", queryUrl);
+  //navigate to the state
+  geocoder.geocode({ address: state }, (results, status) => {
+    if (status === "OK") {
+      map.setCenter(results[0].geometry.location);
+    } else {
+      alert(
+        "Geocode was not successful for the following reason: " + status
+      );
+    }
+  });
 
-//   $.ajax({
-//     url: queryUrl,
-//     method: "GET",
-//     dataType: "jsonp",
-//   }).then(function (response) {
-//     var hospitals = JSON.parse(response.contents);
-//     console.log("we found", hospitals.length, "in the great state of", state);
+  // add markers for the first 5 hospitals in the list.
+  for (let index = 0; index < limit; index++) {
+    const hospital = hospitals[index];
+    const address = hospital.street_address + ", " + hospital.city + ", " + hospital.state + " " + hospital.zip_code;
+    geocoder.geocode({ address: address }, (results, status) => {
+      if (status === "OK") {
+        map.setCenter(results[0].geometry.location);
+        new google.maps.Marker({
+          map: map,
+          position: results[0].geometry.location,
+        });
+      } else {
+        alert(
+          "Geocode was not successful for the following reason: " + status
+        );
+      }
+    });
+  }
+}
 
-//     // hospitals.forEach(hospital => {
-//     //     console.log('Hospital Name:', hospital.name);
-//     //     console.log('Street Address:', hospital.street_address);
-//     //     console.log('Bed Count:', hospital.hospital_bed_count);
-//     //     console.log('--++--');
-//     // });
-//   });
-// }
+var map = null;
+var geocoder = null;
 
-// var x = $("#demo");
-// function getLocation() {
-//   if (navigator.geolocation) {
-//     navigator.geolocation.getCurrentPosition(showPosition);
-//   } else {
-//     x.innerHTML = "Geolocation is not supported by this browser.";
-//   }
-// }
-
-//   function showPosition(position) {
-//     x.html("Latitude: " + position.coords.latitude +
-//     "<br>Longitude: " + position.coords.longitude);
-//   }
-
-  $("#hospital_search_geo").on("click", getLocation);
+function initMap() {
+  map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 4,
+    center: { lat: 40.554, lng: -91.037 },
+  });
   
-      function initMap() {
-        const map = new google.maps.Map(document.getElementById("map"), {
-          zoom: 8,
-          center: { lat: -34.397, lng: 150.644 },
-        });
-        const geocoder = new google.maps.Geocoder();
-        document.getElementById("submit").addEventListener("click", () => {
-          geocodeAddress(geocoder, map);
-        });
-      }
-
-      function geocodeAddress(geocoder, resultsMap) {
-        const address = document.getElementById("address").value;
-        geocoder.geocode({ address: address }, (results, status) => {
-          if (status === "OK") {
-            resultsMap.setCenter(results[0].geometry.location);
-            new google.maps.Marker({
-              map: resultsMap,
-              position: results[0].geometry.location,
-            });
-          } else {
-            alert(
-              "Geocode was not successful for the following reason: " + status
-            );
-          }
-        });
-      }
+  geocoder = new google.maps.Geocoder();
+}
     

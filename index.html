@@ -4,176 +4,134 @@
 <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]>> <html class="no-js" lang="en"> <![endif]-->
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <!-- Set the viewport width to device width for mobile -->
-    <meta name="viewport" content="width=device-width" />
+<html>
 
-    <title>Medical Call</title>
+<head>
+  <meta charset="utf-8" />
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width" />
 
-    <!-- Included CSS Files (Compressed) -->
-    <link rel="stylesheet" href="stylesheets/foundation.min.css" />
-    <link rel="stylesheet" href="stylesheets/main.css" />
-    <link rel="stylesheet" href="stylesheets/app.css" />
+  <title>Medical Call</title>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <!-- Included CSS Files (Compressed) -->
+  <link rel="stylesheet" href="stylesheets/foundation.min.css" />
+  <link rel="stylesheet" href="stylesheets/main.css" />
+  <link rel="stylesheet" href="stylesheets/app.css" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
-    <!-- <link rel="stylesheet" href="ligature.css"> -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
-    <!-- Google fonts -->
-    <link
-      href="//fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Playfair+Display:400italic"
-      rel="stylesheet"
-      type="text/css"
-    />
+  <!-- <link rel="stylesheet" href="ligature.css"> -->
 
-    <!-- IE Fix for HTML5 Tags -->
-    <!--[if lt IE 9]>
+  <!-- Google fonts -->
+  <!-- <link href="//fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Playfair+Display:400italic" rel="stylesheet"
+    type="text/css" /> -->
+
+  <!-- IE Fix for HTML5 Tags -->
+  <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <script
-    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly"
-    defer
-  ></script>
+
+  <script defer src="doctorscript.js"></script>
   <script defer
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXS0MQbQDV5TGAIvkSsNESvhyGKeeQEf8&libraries=places&callback=initMap">
-</script>
-  </head>
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXS0MQbQDV5TGAIvkSsNESvhyGKeeQEf8&libraries=places&callback=initMap">
+  </script>
+</head>
 
-  <body>
-    <!-- ######################## Header ######################## -->
+<body>
+  <!-- ######################## Header ######################## -->
 
-    <header>
-      <h1 class="heading_supersize">Medical Call</h1>
-      <h2 class="welcome_text">Get your information from important doctors</h2>
-    </header>
+  <header>
+    <h1 class="heading_supersize">Medical Call</h1>
+    <h2 class="welcome_text">Get your information from important doctors</h2>
+  </header>
 
-    <!-- ######################## Section ######################## -->
+  <!-- ######################## Section ######################## -->
 
-    <section class="section_light">
-      <div class="row">
-        <div class="four columns">
-          <h3>
-            <span class="dropcap_red lsf-icon-dropcap"></span>Chat with our
-            Doctors
-          </h3>
-          <p>
-            With our latest application you can chat with our experts and
-            doctors about your condition
-          </p>
-        </div>
+  <section class="section_light">
+    <div class="row">
+      <div class="four columns">
+        <h3>
+          <span class="dropcap_red lsf-icon-dropcap"></span>Chat with our
+          Doctors
+        </h3>
+        <p>
+          With our latest application you can chat with our experts and
+          doctors about your condition
+        </p>
+      </div>
 
-        <div class="four columns">
-          <h3>
-            <span class="dropcap_black lsf-icon-dropcap"></span> Video Chat
-          </h3>
-          <p>Video chat live with doctors and tabulate your the results</p>
-        </div>
+      <div class="four columns">
+        <h3>
+          <span class="dropcap_black lsf-icon-dropcap"></span> Video Chat
+        </h3>
+        <p>Video chat live with doctors and tabulate your the results</p>
+      </div>
 
-        <div class="four columns">
-          <h3>
-            <span class="dropcap_black lsf-icon-dropcap"></span>Locate our
-            Hospitals
-          </h3>
-          <div class="input-group input-group-rounded">
-            <!-- <input class="input-group-field" type="search" id="hospital_search_state"> -->
-            <select name="state" id="hospital_search_state">
-              <option value="" selected="selected">Select a State</option>
-              <option value="CA">California</option>
-              <option value="NY">New York</option>
-              <option value="PA">Pennsylvania</option>
-            </select>
-            <div class="input-group-button">
-              <button
-                class="button secondary"
-                value="Search"
-                id="hospital_search"
-              >
-                Search
-              </button>
-              <!-- <button class="button secondary" id="hospital_search_geo">Get hospitals in my state</button>
-              <div id="demo">Your position here.</div> -->
-            </div>
+      <div class="four columns">
+        <h3>
+          <span class="dropcap_black lsf-icon-dropcap"></span>Locate our
+          Hospitals
+        </h3>
+        <div class="input-group input-group-rounded">
+          <!-- <input class="input-group-field" type="search" id="hospital_search_state"> -->
+          <select name="state" id="hospital_search_state">
+            <option value="" selected="selected">Select a State</option>
+            <option value="CA">California</option>
+            <option value="NY">New York</option>
+            <option value="PA">Pennsylvania</option>
+          </select>
+          <div class="input-group-button">
+            <button class="button secondary" value="Search" id="hospital_search">
+              Search
+            </button>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ######################## Section ######################## -->
-<!-- The map lives here...and geolocation input-->
-    <section  class="section_dark">
-      <div id="floating-panel">
-        <input id="address" type="textbox" value="NY" />
-        <input id="submit" type="button" value="Locate your Hospital in the map" />
-      </div>
-      <div id="map"></div>
-   
-      
-    </section>
+  <!-- ######################## Section ######################## -->
+  <!-- The map lives here...and geolocation input-->
+  <section class="section_dark">
+    <!-- <div id="floating-panel">
+      <input id="address" type="textbox" value="NY" />
+      <input id="submit" type="button" value="Locate your Hospital in the map" />
+    </div> -->
+    <div id="map" style="height:500px"></div>
 
-    <!-- ######################## Section ######################## -->
 
-    <section class="section_main">
-      <h2 style="text-align: center" id="discoverer">Discover Our Hospitals</h2>
+  </section>
 
-      <div class="row" id="hospital_row">
-        <article class="six columns">
-          <div class="panel">
-            <h3>Hospital One</h3>
-            <p class="hospital-name"></p>
-            <p class="hospital-address"></p>
-            <p class="state"></p>
-            <p class="bed-count"></p>
+  <!-- ######################## Section ######################## -->
 
-            <a href="#" class="button secondary small radius"
-              >Learn More &raquo;</a
-            >
-          </div>
-        </article>
+  <section class="section_main">
+    <h2 style="text-align: center" id="discoverer">Discover Our Hospitals</h2>
 
-        <article class="six columns">
-          <div class="panel">
-            <h3>Hospital Two</h3>
-            <p class="populate-field2"></p>
-            <a href="#" class="button secondary small radius"
-              >Learn More &raquo;</a
-            >
-          </div>
-        </article>
-      </div>
-    </section>
+    <div class="row" id="hospital_row">
+      <article class="six columns">
+        <div class="panel">
+          <h3>Hospital One</h3>
+          <p class="hospital-name"></p>
+          <p class="hospital-address"></p>
+          <p class="state"></p>
+          <p class="bed-count"></p>
 
-    <script src="doctorscript.js"></script>
-  </body>
+          <a href="#" class="button secondary small radius">Learn More &raquo;</a>
+        </div>
+      </article>
+
+      <article class="six columns">
+        <div class="panel">
+          <h3>Hospital Two</h3>
+          <p class="populate-field2"></p>
+          <a href="#" class="button secondary small radius">Learn More &raquo;</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+ 
+</body>
+
 </html>
-<!-- <div class="row"> 
-      
-  <h2 style="color: white">Latest Doctors in your location</h2>
-  
-      <div class="two columns">
-      <a href="#" class="th"><img src="" width="100" height="100" alt="desc" /></a>
-      </div>
-      
-      <div class="two columns">
-      <a href="#" class="th"><img src="" width="100" height="100"  alt="desc" /></a>
-      </div>
-      
-      <div class="two columns">
-      <a href="#" class="th"><img src="" width="100" height="100"  alt="desc" /></a>
-      </div>
-      
-      <div class="two columns">
-      <a href="#" class="th"><img src="" width="100" height="100"  alt="desc" /></a>
-      </div>
-      
-      <div class="two columns">
-      <a href="#" class="th"><img src="" width="100" height="100"  alt="desc" /></a>
-      </div>
-      
-      <div class="two columns">
-      <a href="#" class="th"><img src="" width="100" height="100"  alt="desc" /></a>
-      </div>
-
-  
-  </div> -->
