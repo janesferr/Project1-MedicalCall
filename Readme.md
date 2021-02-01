@@ -1,11 +1,17 @@
 # Project 1: Medical Call
 
-https://janesferr.github.io/Project1-MedicalCall/
-https://github.com/janesferr/Project1-MedicalCall
+* https://janesferr.github.io/Project1-MedicalCall/
+* https://github.com/janesferr/Project1-MedicalCall
 
 <img width="1058" alt="medicall-call-screen-shot" src="https://user-images.githubusercontent.com/76419703/106395150-a8b85e80-63ce-11eb-8144-0064379b7283.png">
+## Key Topics
+The following topics will be covered in this unit:
+* JSON
+* AJAX
+* HTTP GET requests
+* Server-side APIs
 
-# Using what we have learnt so far, we created an app using APIs found online, to use as a reference to implement in our app.
+# Using what we have learn so far, we created an app using APIs found online, to use as a reference to implement in our app.
 
 # MVP, minimum viable product implemented: APIs used were, Geolocation and Community Benefit Insight
 
