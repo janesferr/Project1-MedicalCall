@@ -21,6 +21,6 @@ The following topics will be covered in this unit:
 
 ## A feature implemented in the project, was using FIGMA to do the wireframe for the app.
 
-## Another feature was how APIs worked or didn't work. No more medical APIs for me.
+## Another feature was how APIs worked or didn't work. 
 
 https://docs.google.com/presentation/d/1ZMECwJOmSf55A1yEVd9KCmhDEwqMb6qnCySdDEtsZvE/edit#slide=id.g29f43f0a72_0_5
