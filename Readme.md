@@ -11,16 +11,16 @@ The following topics will be covered in this unit:
 * HTTP GET requests
 * Server-side APIs
 
-# Using what we have learn so far, we created an app using APIs found online, to use as a reference to implement in our app.
+## Using what we have learn so far, we created an app using APIs found online, to use as a reference to implement in our app.
 
-# MVP, minimum viable product implemented: APIs used were, Geolocation and Community Benefit Insight
+## MVP, minimum viable product implemented: APIs used were, Geolocation and Community Benefit Insight
 
-# Our Git branching worklfow to some work to git use to it. To create separate branches and to push, to pull, to merge and even fetch, it took us a few days and we're still getting used to it.
+## Our Git branching worklfow to some work to git use to it. To create separate branches and to push, to pull, to merge and even fetch, it took us a few days and we're still getting used to it.
 
-# We paracticed Agile software development in that we made requirements for developing our app and distributed assignments to each team member and made solutions through the collaborative effort by self-organizing and cross-functional teamwork to complete our app.
+## We paracticed Agile software development in that we made requirements for developing our app and distributed assignments to each team member and made solutions through the collaborative effort by self-organizing and cross-functional teamwork to complete our app.
 
-# A feature implemented in the project, was using FIGMA to do the wireframe for the app.
+## A feature implemented in the project, was using FIGMA to do the wireframe for the app.
 
-# Another feature was how APIs worked or didn't work. No more medical APIs for me.
+## Another feature was how APIs worked or didn't work. No more medical APIs for me.
 
 https://docs.google.com/presentation/d/1ZMECwJOmSf55A1yEVd9KCmhDEwqMb6qnCySdDEtsZvE/edit#slide=id.g29f43f0a72_0_5
