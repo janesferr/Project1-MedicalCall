@@ -13,11 +13,19 @@ The following topics will be covered in this unit:
 
 ## Using what we have learn so far, we created an app using APIs found online, to use as a reference to implement in our app.
 
-## MVP, minimum viable product implemented: APIs used were, Geolocation and Community Benefit Insight
+## MVP, minimum viable product implemented:  Atleast two APIs used in this website: Geolocation and Community Benefit Insight
 
-## Our Git branching worklfow to some work to git use to it. To create separate branches and to push, to pull, to merge and even fetch, it took us a few days and we're still getting used to it.
+## Technologies used:
+ * JQuery 
+ * Foundation as the CSS Framework
+ * Google Map API
+ * Community Benefit API
+ * Webpack
 
-## We paracticed Agile software development in that we made requirements for developing our app and distributed assignments to each team member and made solutions through the collaborative effort by self-organizing and cross-functional teamwork to complete our app.
+The information you will receive from the app about the hospitals will save you time and will get you the help that you need much faster.
+
+## Description
+Our website and app will allow you to locate any hospital closest to you and be able to have direct consultation with their doctors while providing necessary medical guidance.  It also allows you to look at the bed count for each hospital near you and the information and location near your location.
 
 ## A feature implemented in the project, was using FIGMA to do the wireframe for the app.
 
